@@ -1,13 +1,17 @@
 var cookie = (function() {
 
-  var create = function(name, value, milliseconds) {
+	var create = function(name, value, milliseconds, domain) {
 		var expires = "";
 		if (milliseconds) {
 			var date = new Date();
 			date.setTime(date.getTime() + milliseconds);
 			expires = "; expires=" + date.toGMTString();
 		}
-		document.cookie = name + "=" + value + expires + "; path=/";
+		var dom = "";
+		if (domain) {
+			dom = "; domain=" + domain;
+		}
+		document.cookie = name + "=" + value + expires + dom + "; path=/";
 	};
 
 	var read = function(name) {
