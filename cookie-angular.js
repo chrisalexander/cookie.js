@@ -1,5 +1,5 @@
 var ngCookie = angular.module("cookie", []);
 
-ngCookie.factory("cookie", ['$rootScope', function($scope) {
+ngCookie.factory("cacookie", ['$rootScope', function($scope) {
   return cookie;
 }]);
