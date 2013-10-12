@@ -30,7 +30,7 @@ var cookie = (function() {
 	};
 
 	var erase = function(name) {
-		createCookie(name, "", -1);
+		create(name, "", -1);
 	};
 
 	return {
